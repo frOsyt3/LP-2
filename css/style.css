@@ -31,14 +31,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.3rem 7%;
+  padding: 0.1rem 7%;
   background-color: #ffffff;
   border-bottom: 1px solid #8dc63e;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  margin-bottom: 0;
   z-index: 9999;
 }
 
@@ -77,6 +76,10 @@ body {
   transform: scaleX(0.5);
 }
 
+.navbar-extra {
+  order: 1;
+}
+
 .navbar .navbar-extra a {
   color: #fff;
   margin: 0 0.5rem;
@@ -92,9 +95,8 @@ body {
 }
 
 .navbar-logo-img {
-  width: 60px;
+  width: 100px;
   height: auto;
-  margin-right: 10px;
 }
 
 .navbar-logo {
@@ -102,8 +104,20 @@ body {
   font-size: 1.8rem;
   font-weight: bold;
   text-decoration: none;
+  margin-left: auto;
 }
 
+.navbar-nav {
+  order: 2;
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* biar agak renggang */
+}
+
+.navbar-brand {
+  order: 3;
+  margin-left: auto; /* dorong ke kanan */
+}
 /* Logo */
 .logo img {
   height: 40px;
