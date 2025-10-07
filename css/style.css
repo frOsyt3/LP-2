@@ -194,6 +194,19 @@ body {
   flex: 1;
   text-align: right;
   min-width: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35%; /* seberapa jauh efek fade-nya */
+  height: 100%;
+  background: linear-gradient(to right, #e9f6e3 50%, transparent);
+  pointer-events: none; /* biar ga ganggu klik elemen */
 }
 
 .hero-image-container img {
