@@ -31,13 +31,14 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.4rem 7%;
+  padding: 0.3rem 7%;
   background-color: #ffffff;
-  border-bottom: 1px solid #785a3b;
+  border-bottom: 1px solid #8dc63e;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  margin-bottom: 0;
   z-index: 9999;
 }
 
@@ -113,8 +114,9 @@ body {
 .promo-container {
   background-color: #d9ecaf;
   text-align: center;
-  padding: 20px 10px;
+  padding: 30px 10px;
   border: 1px solid #eee;
+  margin-top: 0;
 }
 
 .promo-container h2 {
@@ -132,22 +134,28 @@ body {
 /* Hero Text */
 .hero-section {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  padding: 100px 7%; /* jarak atas biar ga ketiban navbar */
+  background-color: #e9f6e3; /* warna hijau muda opsional */
+  flex-wrap: wrap; /* biar responsif di HP */
 }
 
 .hero-text-container {
-  padding: 170px;
+  flex: 1;
+  padding-right: 40px;
+  min-width: 300px;
 }
 
 .hero-text-container h1 {
-  font-size: 24px;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 10px;
+  color: #013220;
 }
 
 .hero-text-container p {
-  font-size: 16px;
+  font-size: 1rem;
   color: #555;
   margin-bottom: 20px;
 }
@@ -160,14 +168,42 @@ body {
   padding: 12px 20px;
   border-radius: 5px;
   text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #026440;
 }
 
 /* Hero Image */
+.hero-image-container {
+  flex: 1;
+  text-align: right;
+  min-width: 300px;
+}
+
 .hero-image-container img {
-  left: 400px;
-  width: 100%;
-  height: 50vh;
-  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 100px 20px;
+  }
+
+  .hero-image-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .hero-text-container {
+    padding-right: 0;
+  }
 }
 
 /* Fitur gambar loop */
