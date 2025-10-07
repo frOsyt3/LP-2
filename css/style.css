@@ -87,7 +87,7 @@ body {
 
 #hamburger-menu {
   display: none;
-  color:#8dc63e;
+  color: #8dc63e;
 }
 
 .navbar-logo-img {
@@ -332,158 +332,190 @@ body {
 .produksi {
   background: linear-gradient(to bottom, #b2df8a, #d8f3c8);
   text-align: center;
-  padding: 30px 0;
+  padding: 40px 0 40px;
 }
 
 .produksi h2 {
   color: #4caf50;
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-size: 45px;
+  margin-bottom: 30px;
   font-family: sans-serif;
 }
 
-.video-container {
-  display: inline-block;
-  border: 3px solid #9c27b0;
-  padding: 5px;
-  box-sizing: border-box;
-}
-
 .video-container video {
-  width: 480px;
+  width: 1152px;
   /* Lebih lebar agar landscape */
-  height: 270px;
+  height: 648px;
   /* Rasio 16:9 */
   border-radius: 5px;
   object-fit: cover;
   /* jika ingin mengisi area penuh tanpa distorsi */
 }
 
-/* Sertifikat */
+/* SERTIFIKASI */
 .sertifikasi {
   background: linear-gradient(to bottom, #d0f0c0, #e6f5d0);
-  /* gradasi hijau muda */
   text-align: center;
-  padding: 30px 10px;
+  padding: 40px 20px;
   font-family: sans-serif;
 }
 
 .sertifikasi h2 {
   color: #4caf50;
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-size: 45px;
+  margin-bottom: 40px;
+  font-weight: 700;
 }
 
-.sertifikasi-container {
+/* Wrapper utama */
+.slider-container {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 0px;
+}
+
+/* Struktur dalam slide */
+.slider-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Tiap slide */
+.slide {
   display: flex;
   justify-content: center;
-  align-items: center;
-  max-width: 100%;
-  height: 400px;
-  margin: 0 auto;
-  background: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.sertifikasi-image {
-  position: relative;
-}
-
-.sertifikasi-image img {
-  width: 250px;
-  height: 40vh;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 20px;
-  color: green;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.arrow.left {
-  left: -15px;
-}
-
-.arrow.right {
-  right: -15px;
-}
-
-.sertifikasi-text {
-  text-align: left;
-  margin-left: 20px;
-}
-
-.sertifikasi-text h3 {
-  font-size: 18px;
-  color: #333;
-  margin: 0;
-}
-
-.check-icon {
-  color: green;
-  font-size: 18px;
-}
-
-.sertifikasi-text h4 {
-  font-size: 16px;
-  margin: 5px 0;
-}
-
-.sertifikasi-text p {
-  font-size: 14px;
-  color: #555;
-  margin: 5px 0;
-}
-/* Penyesuaian untuk Sertifikasi */
+/* Layout gambar + teks dalam satu baris */
 .sertifikasi-item {
-  text-align: center;
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 70px;
+  gap: 100px;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: left;
 }
 
-.sertifikasi-item img {
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto 15px auto; /* Atur margin bawah untuk jarak */
-  display: block;
-  border-radius: 8px;
-  height: 65vh;
+/* Gambar */
+.sertifikasi-item .certificate {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
+/* Teks */
 .sertifikasi-text-content {
-  color: var(--text-dark);
+  flex: 1;
 }
 
-.sertifikasi-text-content h3 {
-  font-size: 1.5rem;
-  color: var(--primary-color);
-  margin-bottom: 5px;
+.title-with-icon {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.title-with-icon h3 {
+  font-size: 60px;
+  font-weight: lighter;
+  color: black;
+  margin: 0;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.checkmark-icon {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  display: block;
+}
+
+.sertifikasi-text-content h6 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: lighter;
+  color: black;
+  line-height: 1.3;
+  text-align: justify;
 }
 
 .sertifikasi-text-content p {
-  font-size: 1rem;
-  max-width: 400px;
-  margin: 0 auto;
+  font-size: 30px;
+  color: #4caf50;
+  line-height: 1.3;
+  text-align: justify;
+}
+
+/* Tombol panah */
+.arrow {
+  position: absolute;
+  margin: 0 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffffffcc;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
+.arrow:hover {
+  background: #4caf50;
+  color: white;
+}
+
+.arrow.prev {
+  left: -25px;
+}
+
+.arrow.next {
+  right: -25px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sertifikasi-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sertifikasi-item img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .sertifikasi-text-content {
+    text-align: center;
+  }
+
+  .arrow.prev {
+    left: 10px;
+  }
+
+  .arrow.next {
+    right: 10px;
+  }
 }
 
 /* Simulasi */
 .simulasi {
   background: linear-gradient(to bottom, #8dc63e, #e6f5d0);
   text-align: center;
-  padding: 30px 10px;
+  padding: 40px 10px;
   font-family: sans-serif;
 }
 
 .simulasi h2 {
   color: #4caf50;
-  font-size: 20px;
+  font-size: 45px;
   margin-bottom: 20px;
 }
 
@@ -493,11 +525,9 @@ body {
   align-items: center;
   max-width: 80%;
   margin: 0 auto;
-  background: #fff;
   padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
+  gap: 50px;
 }
 
 .simulasi-text {
@@ -506,21 +536,12 @@ body {
   margin: 10px;
 }
 
-.simulasi-text h3 {
-  font-size: 18px;
-  color: #333;
-  margin: 0;
-}
-
-.simulasi-text h4 {
-  font-size: 16px;
-  margin: 5px 0;
-}
-
 .simulasi-text p {
-  font-size: 20px;
-  color: #555;
-  margin: 5px 0;
+  margin-top: 10px;
+  font-size: 30px;
+  color: #4caf50;
+  line-height: 1.3;
+  text-align: justify;
 }
 
 .check-icon {
@@ -547,12 +568,32 @@ body {
   background-color: #f8f9fa;
 }
 
-.trust-text {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+/* Kotak hijau (bagian atas) */
+.trust-box {
+  background-color: #e1f4d4;
+  padding: 1.5rem 2rem;
+  border-radius: 5px;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
+/* Teks + emoji di dalam kotak hijau */
+.trust-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #1f3d1f;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Emoji blink ⚠️ */
 .blinking-emoji {
+  font-size: 100px;
   animation: blink 1s linear infinite;
 }
 
@@ -562,11 +603,13 @@ body {
   }
 }
 
+/* PROMO TEXT di bawah kotak */
 .promo-text {
-  font-size: 2.5rem;
+  font-size: 50px;
   font-weight: 900;
   color: var(--primary-color);
   animation: zoom 2s infinite ease-in-out;
+  margin-top: 1rem;
 }
 
 @keyframes zoom {
