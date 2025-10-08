@@ -31,67 +31,42 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.1rem 7%;
+  padding: 0.5rem 2%;
   background-color: #ffffff;
-  border-bottom: 1px solid #8dc63e;
   position: fixed;
+  height: 70px;
   top: 0;
   left: 0;
   right: 0;
   z-index: 9999;
 }
 
-.navbar .navbar-logo {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #fff;
-  font-style: italic;
-}
-
-.navbar .navbar-logo span {
-  color: blue;
-}
-
-.navbar .navbar-nav a {
-  color: #8dc63e;
-  display: inline-block;
-  font-size: 1.2rem;
-  margin: 0 1rem;
-}
-
-.navbar .navbar-nav a:hover {
-  color: #8dc63e;
-}
-
-.navbar .navbar-nav a::after {
-  content: "";
-  display: block;
-  padding-bottom: 0.5rem;
-  border-bottom: 0.1rem solid cadetblue;
-  transform: scaleX(0);
-  transition: 0.2s linear;
-}
-
-.navbar .navbar-nav a:hover::after {
-  transform: scaleX(0.5);
-}
-
+/* --- HAMBURGER --- */
 .navbar-extra {
   order: 1;
-}
-
-.navbar .navbar-extra a {
-  color: #fff;
-  margin: 0 0.5rem;
-}
-
-.navbar .navbar-extra a:hover {
-  color: cadetblue;
+  z-index: 10000;
 }
 
 #hamburger-menu {
-  display: none;
-  color: #8dc63e;
+  display: block;
+  color: #306b28;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#hamburger-menu svg {
+  width: 45px;
+  height: 45px;
+  stroke-width: 2.5;
+  cursor: pointer;
+}
+
+/* --- LOGO DI KANAN --- */
+.navbar-brand {
+  order: 3;
+  margin-left: auto;
+  z-index: 10000;
 }
 
 .navbar-logo-img {
@@ -99,25 +74,44 @@ body {
   height: auto;
 }
 
-.navbar-logo {
-  color: white;
-  font-size: 1.8rem;
-  font-weight: bold;
-  text-decoration: none;
-  margin-left: auto;
-}
-
+/* --- MENU OVERLAY DARI KIRI --- */
 .navbar-nav {
-  order: 2;
+  position: fixed;
+  top: 75px;
+  left: -200%; /* awalnya tersembunyi */
+  width: 500px;
+  height: 400px;
+  background-color: #2f6b2f;
   display: flex;
-  align-items: center;
-  gap: 1rem; /* biar agak renggang */
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  transition: left 0.3s ease;
+  padding: 1.5rem 2rem;
+  z-index: 9998;
 }
 
-.navbar-brand {
-  order: 3;
-  margin-left: auto; /* dorong ke kanan */
+/* --- Saat aktif muncul --- */
+.navbar-nav.active {
+  left: 0;
 }
+
+/* --- Link menu --- */
+.navbar-nav a {
+  color: #fff;
+  font-weight: 700;
+  font-size: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 0;
+  text-align: left;
+}
+
+.navbar-nav a:hover {
+  color: #d4ffd4;
+}
+
 /* Logo */
 .logo img {
   height: 40px;
@@ -135,13 +129,13 @@ body {
 
 .promo-container h2 {
   color: red;
-  font-size: 28px;
+  font-size: 40px;
   font-weight: bold;
 }
 
 .promo-container p {
   color: red;
-  font-size: 32px;
+  font-size: 40px;
   font-weight: bold;
 }
 
@@ -149,29 +143,32 @@ body {
 .hero-section {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 100px 7%; /* jarak atas biar ga ketiban navbar */
+  align-items: stretch;
+  height: 100vh;
   background-color: #e9f6e3; /* warna hijau muda opsional */
   flex-wrap: wrap; /* biar responsif di HP */
 }
 
 .hero-text-container {
   flex: 1;
-  padding-right: 40px;
   min-width: 300px;
+  z-index: 2;
 }
 
 .hero-text-container h1 {
-  font-size: 2rem;
+  font-size: 50px;
   font-weight: bold;
-  margin-bottom: 10px;
+  line-height: 4.5rem;
+  padding: 50px 0 0 50px;
+  margin-bottom: 20px;
   color: #013220;
 }
 
 .hero-text-container p {
-  font-size: 1rem;
+  font-size: 20px;
+  padding: 0 50px;
+  line-height: 2rem;
   color: #555;
-  margin-bottom: 20px;
 }
 
 .cta-button {
@@ -179,9 +176,11 @@ body {
   background-color: #013220;
   color: white;
   font-weight: bold;
-  padding: 12px 20px;
-  border-radius: 5px;
+  font-size: 3rem;
+  padding: 10px 15px;
+  width: 600px;
   text-decoration: none;
+  margin: 50px 70px;
   transition: background-color 0.3s ease;
 }
 
@@ -192,10 +191,13 @@ body {
 /* Hero Image */
 .hero-image-container {
   flex: 1;
-  text-align: right;
-  min-width: 300px;
   position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%; /* separuh kanan section */
   overflow: hidden;
+  z-index: 1;
 }
 
 .hero-image-container::after {
@@ -203,33 +205,70 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 35%; /* seberapa jauh efek fade-nya */
-  height: 100%;
-  background: linear-gradient(to right, #e9f6e3 50%, transparent);
-  pointer-events: none; /* biar ga ganggu klik elemen */
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, #e9f6e3 5%, transparent 80%);
+  pointer-events: none; /* biar efek ini nggak ganggu klik */
+  z-index: 2;
 }
 
 .hero-image-container img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
+  width: 100%; /* setengah dari lebar viewport */
+  height: 100vh;
   object-fit: cover;
 }
 
 @media (max-width: 768px) {
   .hero-section {
-    flex-direction: column-reverse;
-    text-align: center;
-    padding: 100px 20px;
+    height: 50vh;
+    position: relative;
   }
 
-  .hero-image-container {
-    text-align: center;
-    margin-bottom: 20px;
+  .cta-button {
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    width: 315px;
+    margin: 50px 50px;
   }
 
   .hero-text-container {
-    padding-right: 0;
+    z-index: 2;
+  }
+
+  .hero-text-container h1 {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 2.5rem;
+    padding: 70px 0 0 40px;
+    margin-bottom: 20px;
+    color: #013220;
+    z-index: 1;
+  }
+
+  .hero-text-container p {
+    font-size: 15px;
+    padding: 0 40px;
+    line-height: 2rem;
+    color: black;
+  }
+
+  .hero-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .hero-image-container::after {
+    background: linear-gradient(to right, #e9f6e3 45%, transparent 80%);
+  }
+
+  .hero-image-container img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
   }
 }
 
@@ -238,8 +277,7 @@ body {
   background: linear-gradient(to bottom, #eaf5d8, #ffffff);
   padding-top: 20px;
   padding-bottom: 20px;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+
   max-width: 100%;
   margin: auto;
   overflow: hidden;
@@ -395,7 +433,7 @@ body {
 .produksi {
   background: linear-gradient(to bottom, #b2df8a, #d8f3c8);
   text-align: center;
-  padding: 40px 0 40px;
+  padding: 40px 0;
 }
 
 .produksi h2 {
@@ -405,14 +443,57 @@ body {
   font-family: sans-serif;
 }
 
+/* Container video */
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .video-container video {
-  width: 1152px;
-  /* Lebih lebar agar landscape */
-  height: 648px;
-  /* Rasio 16:9 */
+  width: 80%;
+  max-width: 1152px;
+  height: auto;
   border-radius: 5px;
   object-fit: cover;
-  /* jika ingin mengisi area penuh tanpa distorsi */
+}
+
+/* Tablet (iPad, lebar <= 1024px) */
+@media (max-width: 1024px) {
+  .produksi h2 {
+    font-size: 35px;
+  }
+
+  .video-container video {
+    width: 90%;
+    max-width: 900px;
+  }
+}
+
+/* Mobile (lebar <= 768px) */
+@media (max-width: 768px) {
+  .produksi h2 {
+    font-size: 28px;
+  }
+
+  .video-container video {
+    width: 95%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* HP kecil (lebar <= 480px) */
+@media (max-width: 480px) {
+  .produksi h2 {
+    font-size: 24px;
+  }
+
+  .video-container video {
+    width: 100%;
+    border-radius: 3px;
+  }
 }
 
 /* SERTIFIKASI */
@@ -778,117 +859,24 @@ body {
 }
 
 /* Responsive */
-/* Laptop */
-@media (max-width: 1366px) {
-  html {
-    font-size: 65%;
-  }
-  .hero-section {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px;
-    gap: 40px;
-  }
-
-  .hero-text-container {
-    flex: 1;
-    padding: 0;
-  }
-
-  .hero-image-container {
-    flex: 1;
-  }
-
-  .hero-image-container img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .hero-text-container h1 {
-    font-size: 22px;
-  }
-
-  .hero-text-container p {
-    font-size: 18px;
-  }
-}
 /*HP*/
 @media (max-width: 768px) {
-  html {
-    font-size: 70%;
+  .navbar-nav {
+    position: fixed;
+    top: 75px;
+    left: -200%; /* awalnya tersembunyi */
+    width: 300px;
+    height: 350px;
+  }
+
+  .navbar-nav a {
+    font-size: 1.5rem;
   }
 
   .text-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-
-  #hamburger-menu {
-    display: inline-block;
-  }
-
-  .navbar .navbar-nav {
-    position: absolute;
-    top: 100%;
-    right: -100%;
-    background-color: #8dc63e;
-    width: 30rem;
-    height: 100vh;
-    transition: 0.3s;
-  }
-
-  .navbar .navbar-nav.active {
-    left: 0;
-  }
-
-  .navbar .navbar-nav a {
-    color: black;
-    display: block;
-    margin: 1.5rem;
-    padding: 0.5rem;
-    font-size: 2rem;
-  }
-
-  .navbar .navbar-nav a::after {
-    transform-origin: 0 0;
-  }
-
-  .navbar .navbar-nav a:hover::after {
-    transform: scaleX(0.2);
-  }
-
-  .hero-section {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px;
-    gap: 40px;
-  }
-
-  .hero-text-container {
-    flex: 1;
-    padding: 0;
-  }
-
-  .hero-image-container {
-    flex: 1;
-  }
-
-  .hero-image-container img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .hero-text-container h1 {
-    font-size: 22px;
-  }
-
-  .hero-text-container p {
-    font-size: 18px;
   }
 
   .features-section {
