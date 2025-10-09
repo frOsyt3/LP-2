@@ -226,10 +226,10 @@ body {
   }
 
   .cta-button {
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 10px 15px;
-    width: 315px;
-    margin: 50px 50px;
+    width: 220px;
+    margin: 10px 0 0 40px;
   }
 
   .hero-text-container {
@@ -883,9 +883,9 @@ body {
 /* Gambar danger merah di pojok kanan atas */
 .danger-icon {
   position: absolute;
-  top: -30px;   /* atur sesuai tinggi yang lo mau */
+  top: -30px; /* atur sesuai tinggi yang lo mau */
   right: -20px; /* biar nongol dikit keluar frame */
-  width: 60px;  /* ukuran icon */
+  width: 60px; /* ukuran icon */
   height: auto;
   transform: rotate(20deg);
   animation: blinkDanger 1s infinite alternate;
@@ -963,64 +963,60 @@ body {
     font-size: 18px; /* biar muat di layar HP */
   }
 
-/* Floating WhatsApp Button & Footer */
-.floating-whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: var(--secondary-color);
-  color: var(--white);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 100;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-/* Footer */
-.footer {
-  background-color: var(--primary-color);
-  color: var(--white);
-  text-align: center;
-  padding: 2rem 7%;
-  margin-bottom: -80px;
-}
+  /* Floating WhatsApp Button & Footer */
+  .floating-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  /* Footer */
+  .footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem 7%;
+    margin-bottom: -80px;
+  }
 
-.footer .socials {
-  margin-bottom: 1rem;
-}
+  .footer .socials {
+    margin-bottom: 1rem;
+  }
 
-.footer .socials a {
-  color: var(--white);
-  margin: 0 0.5rem;
-}
+  .footer .socials a {
+    color: var(--white);
+    margin: 0 0.5rem;
+  }
 
-.footer .credit {
-  color: rgb(255, 255, 255);
-}
+  .footer .credit {
+    color: rgb(255, 255, 255);
+  }
 
-/* Universal Slider Styles */
-.slider-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
+  /* Universal Slider Styles */
+  .slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
 
-.slider-wrapper {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
 
-.slide {
-  min-width: 100%;
-  box-sizing: border-box;
-}
-
-.sertifikasi .sertifikasi-item {
-  width: 90%;
-  margin: 0 auto;
+  .sertifikasi .sertifikasi-item {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
 /* Responsive */
