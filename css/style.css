@@ -13,6 +13,7 @@
   --img-gap: 30px;
   --scroll-speed: 7s; /* Durasi animasi, bisa diubah */
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -335,98 +336,199 @@ body {
   font-weight: bold;
 }
 
-/* Layanan*/
+/* lAYANAN */
 .layanan-section {
-  padding: 60px 20px;
-  background: linear-gradient(to bottom, #eaf5d8, #ffffff);
+  background: linear-gradient(to bottom, #d7ebc2, #ffffff);
+  padding: 60px 0px 0px;
+  text-align: center;
+}
+
+.judul-section {
+  font-size: 35px;
+  letter-spacing: 2px;
+  color: #1c552c;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
-  width: 100%;
 }
 
 .layanan-card {
-  background: #eaf5d8;
   display: flex;
-  max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px 0 20px;
+  max-width: 900px;
+  width: 100%;
   overflow: hidden;
-  padding: 20px;
+  gap: 25px;
   position: relative;
 }
 
+.layanan-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.layanan-img {
+  flex: 0 0 350px;
+  margin-left: 0;
+}
+
 .layanan-img img {
-  width: 23vw;
-  height: 60vh;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
-.layanan-content {
-  padding-left: 30px;
-  color: #0f3c25;
-  text-align: left; /* Teks rata kiri */
+.layanan-info {
+  flex: 1;
+  line-height: 2rem;
+  text-align: left;
+  color: #1d3922;
 }
 
-.layanan-content h4 {
-  font-weight: normal;
-  font-size: 1rem;
+.layanan-info h3 {
+  font-size: 30px;
+  line-height: 2.5rem;
+  font-style: italic;
+  color: #1c552c;
+  font-weight: bold;
   margin-bottom: 5px;
-  color: #777; /* Warna teks "SKINCARE SERIES" */
 }
 
-.layanan-content h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #216733;
-  font-weight: bold; /* Judul paket lebih tebal */
+.harga-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  margin-top: 10px;
 }
 
 .harga-normal {
-  font-size: 0.9rem;
-  color: #666;
-  margin-right: 10px;
-  text-decoration: line-through; /* Harga normal dicoret */
+  text-align: left;
+  color: #1c552c;
+  font-size: 0.8rem;
+  line-height: 1.2;
 }
 
-.coret {
+.harga-coret {
+  color: #b10000;
   text-decoration: line-through;
-  color: red;
-  margin-left: 5px;
+  font-weight: 500;
 }
 
 .harga-promo {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #0f3c25;
-  margin: 10px 0;
+  font-size: 5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: black;
+  line-height: 1;
+  position: relative;
 }
 
 .jt {
   font-size: 1.5rem;
-  margin-left: 5px;
+  position: relative;
+  top: -2em; /* naik ke atas angka */
+  margin-left: 10px;
+}
+
+.layanan-bottom {
+  width: 100%;
+  text-align: right;
 }
 
 .deskripsi {
   font-size: 0.95rem;
-  line-height: 1.5;
-  color: #1a1a1a;
-  margin-bottom: 20px;
+  color: #222;
+  line-height: 1.6;
+  margin: 20px 20px 0px;
+  text-align: justify;
 }
 
 .btn-promo {
-  display: inline-flex;
-  align-items: center;
-  background-color: #0f3c25;
+  display: inline-block;
+  background-color: #0b3c1c;
   color: white;
-  padding: 12px 20px;
+  padding: 10px 15px;
   border-radius: 8px;
   text-decoration: none;
-  font-weight: bold;
-  margin-top: 10px; /* Jarak tombol dari deskripsi */
+  font-weight: 600;
+  font-size: 20px;
+  transition: background 0.3s;
+  margin: 20px;
 }
 
-.btn-promo img {
-  width: 20px;
-  margin-right: 10px;
+.btn-promo:hover {
+  background-color: #196e35;
+}
+
+/* Tombol panah */
+.arrow {
+  position: absolute;
+  top: 52%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow svg {
+  width: 40px;
+  height: 40px;
+  stroke: #0b3c1c;
+}
+
+.arrow:hover {
+}
+
+.arrow.prev {
+  left: 15px;
+}
+
+.arrow.next {
+  right: 15px;
+}
+
+/* Responsif — tetap sama layout-nya */
+@media (max-width: 768px) {
+  .layanan-top {
+    flex-direction: row; /* tetap sejajar kiri-kanan */
+    gap: 15px;
+  }
+
+  .layanan-img {
+    flex: 0 0 45%;
+  }
+
+  .layanan-info {
+    flex: 1;
+  }
 }
 
 /* Produksi */
@@ -438,61 +540,60 @@ body {
 
 .produksi h2 {
   color: #4caf50;
-  font-size: 45px;
+  font-size: 30px;
   margin-bottom: 30px;
   font-family: sans-serif;
 }
 
-/* Container video */
-.video-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Wrapper buat padding kiri-kanan */
+.video-wrapper {
   width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Container video untuk 16:9 */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 1152px;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .video-container video {
-  width: 80%;
-  max-width: 1152px;
-  height: auto;
-  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-/* Tablet (iPad, lebar <= 1024px) */
+/* Tablet */
 @media (max-width: 1024px) {
-  .produksi h2 {
-    font-size: 35px;
-  }
-
-  .video-container video {
-    width: 90%;
-    max-width: 900px;
+  .video-wrapper {
+    padding: 0 32px;
   }
 }
 
-/* Mobile (lebar <= 768px) */
+/* Mobile */
 @media (max-width: 768px) {
-  .produksi h2 {
-    font-size: 28px;
-  }
-
-  .video-container video {
-    width: 95%;
-    max-width: 100%;
-    height: auto;
+  .video-wrapper {
+    padding: 0 16px;
   }
 }
 
-/* HP kecil (lebar <= 480px) */
+/* HP kecil */
 @media (max-width: 480px) {
-  .produksi h2 {
-    font-size: 24px;
+  .video-wrapper {
+    padding: 0 12px;
   }
 
-  .video-container video {
-    width: 100%;
-    border-radius: 3px;
+  .video-container {
+    border-radius: 5px;
   }
 }
 
@@ -500,209 +601,230 @@ body {
 .sertifikasi {
   background: linear-gradient(to bottom, #d0f0c0, #e6f5d0);
   text-align: center;
-  padding: 40px 20px;
+  padding: 20px 0 10px;
   font-family: sans-serif;
 }
 
 .sertifikasi h2 {
   color: #4caf50;
-  font-size: 45px;
-  margin-bottom: 40px;
+  font-size: 35px;
   font-weight: 700;
 }
 
-/* Wrapper utama */
+/* Container slider */
 .slider-container {
   position: relative;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 0px;
+  max-width: 1200px;
+  overflow: hidden;
 }
 
-/* Struktur dalam slide */
+/* Wrapper slides */
 .slider-wrapper {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
 }
 
 /* Tiap slide */
 .slide {
+  flex: 0 0 100%;
   display: flex;
   justify-content: center;
 }
 
-/* Layout gambar + teks dalam satu baris */
+/* Layout gambar kiri - teks kanan */
 .sertifikasi-item {
   display: flex;
   align-items: center;
-  padding: 0 70px;
-  gap: 100px;
-  flex-wrap: wrap;
   justify-content: center;
+  gap: 80px;
   text-align: left;
+  flex-wrap: nowrap;
+  padding: 20px;
 }
 
-/* Gambar */
+/* Gambar sertifikat */
 .sertifikasi-item .certificate {
-  width: 400px;
-  max-width: 100%;
+  width: 450px;
   height: auto;
-  border-radius: 10px;
+  aspect-ratio: 9 / 11; /* mendekati 900x1080 */
+  border-radius: 12px;
   object-fit: cover;
 }
 
-/* Teks */
+/* Bagian teks */
 .sertifikasi-text-content {
   flex: 1;
+  max-width: 600px;
 }
 
 .title-with-icon {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
+  gap: 6px;
 }
 
 .title-with-icon h3 {
-  font-size: 60px;
+  font-size: 30px;
   font-weight: lighter;
-  color: black;
+  color: #000;
   margin: 0;
   line-height: 1.2;
-  margin-bottom: 10px;
+}
+
+.checkmark-icon {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+.sertifikasi-text-content h6 {
+  margin: 12px 0 20px;
+  font-size: 10px;
+  font-weight: 400;
+  color: #000;
+}
+
+.sertifikasi-text-content p {
+  font-size: 22px;
+  color: #4caf50;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* RESPONSIVE — tetap kiri-kanan tapi proporsional */
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+  .sertifikasi-item {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .title-with-icon h3 {
+    font-size: 35px;
+  }
+
+  .sertifikasi-text-content h6 {
+    font-size: 11px;
+    margin: 5px 0 10px;
+  }
+
+  .sertifikasi-item .certificate {
+    width: 150px;
+  }
+
+  .sertifikasi-text-content p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+}
+
+/* SIMULASI */
+.simulasi {
+  background: linear-gradient(to bottom, #8dc63e, #e6f5d0);
+  text-align: center;
+  padding: 60px 20px;
+  font-family: sans-serif;
+}
+
+.simulasi h2 {
+  color: #4caf50;
+  font-size: 30px;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+/* Container utama */
+.simulasi-container {
+  display: flex;
+  flex-direction: row; /* tetap teks kiri, gambar kanan */
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Teks di kiri */
+.simulasi-text {
+  flex: 1;
+  text-align: left;
+}
+
+.title-with-icon {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.title-with-icon h3 {
+  font-size: 50px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+  line-height: 1.2;
 }
 
 .checkmark-icon {
   width: 35px;
   height: 35px;
   object-fit: contain;
-  display: block;
-}
-
-.sertifikasi-text-content h6 {
-  margin-bottom: 20px;
-  font-size: 20px;
-  font-weight: lighter;
-  color: black;
-  line-height: 1.3;
-  text-align: justify;
-}
-
-.sertifikasi-text-content p {
-  font-size: 30px;
-  color: #4caf50;
-  line-height: 1.3;
-  text-align: justify;
-}
-
-/* Tombol panah */
-.arrow {
-  position: absolute;
-  margin: 0 40px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #ffffffcc;
-  border: none;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  transition: all 0.2s ease;
-}
-
-.arrow:hover {
-  background: #4caf50;
-  color: white;
-}
-
-.arrow.prev {
-  left: -25px;
-}
-
-.arrow.next {
-  right: -25px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .sertifikasi-item {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .sertifikasi-item img {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  .sertifikasi-text-content {
-    text-align: center;
-  }
-
-  .arrow.prev {
-    left: 10px;
-  }
-
-  .arrow.next {
-    right: 10px;
-  }
-}
-
-/* Simulasi */
-.simulasi {
-  background: linear-gradient(to bottom, #8dc63e, #e6f5d0);
-  text-align: center;
-  padding: 40px 10px;
-  font-family: sans-serif;
-}
-
-.simulasi h2 {
-  color: #4caf50;
-  font-size: 45px;
-  margin-bottom: 20px;
-}
-
-.simulasi-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 80%;
-  margin: 0 auto;
-  padding: 10px;
-  flex-wrap: wrap;
-  gap: 50px;
-}
-
-.simulasi-text {
-  flex: 1 1 30px;
-  text-align: left;
-  margin: 10px;
 }
 
 .simulasi-text p {
-  margin-top: 10px;
-  font-size: 30px;
+  margin-top: 20px;
+  font-size: 22px;
   color: #4caf50;
-  line-height: 1.3;
+  line-height: 1.5;
   text-align: justify;
 }
 
-.check-icon {
-  color: green;
-  font-size: 18px;
-}
-
+/* Gambar di kanan */
 .simulasi-image {
-  flex: 1 1 200px;
-  text-align: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .simulasi-image img {
-  width: 40vw;
-  height: 50vh;
+  width: 100%;
+  max-width: 800px; /* ukuran dasar */
+  aspect-ratio: 178 / 146; /* rasio sesuai permintaan */
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
   border: 1px solid #ccc;
-  border-radius: 5px;
+}
+
+/* RESPONSIVE — layout tetap kiri-kanan */
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+  .simulasi-container {
+    gap: 30px;
+  }
+
+  .title-with-icon h3 {
+    font-size: 32px;
+  }
+
+  .simulasi-text p {
+    font-size: 18px;
+  }
+
+  .simulasi-image img {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
 }
 
 /* Trust & Promo Section */
@@ -817,45 +939,9 @@ body {
   box-sizing: border-box;
 }
 
-.layanan-section,
-.sertifikasi {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.layanan-section .layanan-card,
 .sertifikasi .sertifikasi-item {
   width: 90%;
   margin: 0 auto;
-}
-
-.slider-container .arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.7);
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #333;
-}
-
-.slider-container .arrow:hover {
-  background: white;
-}
-
-.slider-container .arrow.prev {
-  left: 10px;
-}
-
-.slider-container .arrow.next {
-  right: 10px;
 }
 
 /* Responsive */
@@ -894,77 +980,5 @@ body {
     color: red;
     margin-right: 8px;
     font-weight: bold;
-  }
-
-  .layanan-card {
-    flex-direction: row;
-    text-align: center;
-    gap: 40px;
-  }
-
-  .layanan-content {
-    padding-left: 0;
-    padding-top: 20px;
-  }
-
-  .layanan-img img {
-    margin: 0 auto;
-    height: 50vh;
-    width: 40vw;
-    object-fit: contain;
-  }
-  .layanan-content .deskripsi {
-    font-size: 13px;
-  }
-
-  .sertifikasi-container {
-    flex-direction: row;
-    text-align: center;
-  }
-
-  .sertifikasi-text {
-    margin-left: 0;
-    margin-top: 15px;
-    text-align: center;
-  }
-
-  .arrow.left {
-    left: 0;
-  }
-
-  .arrow.right {
-    right: 0;
-  }
-
-  .simulasi-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .simulasi-text {
-    text-align: center;
-    margin: 10px 0;
-  }
-  .sertifikasi-text-content p {
-    font-size: 15px;
-  }
-  .simulasi {
-    flex-direction: column;
-    padding: 0;
-  }
-  .simulasi-image img {
-    width: 100%;
-  }
-  .simulasi-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 80%;
-    margin: 0 auto;
-    background: #fff;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    flex-wrap: wrap;
   }
 }
