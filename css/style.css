@@ -601,7 +601,7 @@ body {
 .sertifikasi {
   background: linear-gradient(to bottom, #d0f0c0, #e6f5d0);
   text-align: center;
-  padding: 20px 0 10px;
+  padding: 30px 0 10px;
   font-family: sans-serif;
 }
 
@@ -724,43 +724,44 @@ body {
 @media (max-width: 480px) {
 }
 
-/* SIMULASI */
-.simulasi {
+/* ======= ROI SECTION ======= */
+.roi-section {
   background: linear-gradient(to bottom, #8dc63e, #e6f5d0);
   text-align: center;
-  padding: 60px 20px;
+  padding: 30px 20px;
   font-family: sans-serif;
 }
 
-.simulasi h2 {
+.roi-section h2 {
   color: #4caf50;
   font-size: 30px;
   margin-bottom: 40px;
   font-weight: 700;
 }
 
-/* Container utama */
-.simulasi-container {
+/* ======= CONTAINER ======= */
+.roi-container {
   display: flex;
-  flex-direction: row; /* tetap teks kiri, gambar kanan */
+  flex-direction: row; /* teks kiri, gambar kanan */
   align-items: center;
-  justify-content: center;
-  gap: 80px;
+  justify-content: space-between;
+  gap: 60px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 40px;
+  box-sizing: border-box;
 }
 
-/* Teks di kiri */
-.simulasi-text {
-  flex: 1;
+/* ======= TEKS KIRI ======= */
+.roi-text {
+  flex: 0 1 40%;
   text-align: left;
 }
 
 .title-with-icon {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
+  gap: 12px;
 }
 
 .title-with-icon h3 {
@@ -777,54 +778,99 @@ body {
   object-fit: contain;
 }
 
-.simulasi-text p {
+.roi-text p {
   margin-top: 20px;
-  font-size: 22px;
+  font-size: 20px;
   color: #4caf50;
-  line-height: 1.5;
+  line-height: 1.6;
   text-align: justify;
 }
 
-/* Gambar di kanan */
-.simulasi-image {
-  flex: 1;
+/* ======= GAMBAR KANAN ======= */
+.roi-image {
+  flex: 0 1 55%;
   display: flex;
   justify-content: center;
 }
 
-.simulasi-image img {
+.roi-image img {
   width: 100%;
-  max-width: 800px; /* ukuran dasar */
-  aspect-ratio: 178 / 146; /* rasio sesuai permintaan */
+  max-width: 900px;
+  aspect-ratio: 178 / 146;
   height: auto;
   border-radius: 10px;
   object-fit: cover;
   border: 1px solid #ccc;
 }
 
-/* RESPONSIVE — layout tetap kiri-kanan */
+/* ======= RESPONSIVE ======= */
 @media (max-width: 1024px) {
-}
-
-@media (max-width: 768px) {
-  .simulasi-container {
-    gap: 30px;
+  .roi-container {
+    gap: 40px;
+    padding: 20px;
   }
 
   .title-with-icon h3 {
-    font-size: 32px;
+    font-size: 38px;
   }
 
-  .simulasi-text p {
-    font-size: 18px;
+  .roi-text {
+    flex: 0 1 45%;
   }
 
-  .simulasi-image img {
-    max-width: 500px;
+  .roi-image {
+    flex: 0 1 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .roi-container {
+    gap: 25px;
+    padding: 10px;
+  }
+
+  .title-with-icon h3 {
+    font-size: 30px;
+  }
+
+  .roi-text {
+    flex: 0 1 35%;
+  }
+
+  .roi-image {
+    flex: 0 1 60%;
+  }
+
+  .roi-text p {
+    font-size: 14px;
+  }
+
+  .roi-image img {
+    max-width: 600px;
   }
 }
 
 @media (max-width: 480px) {
+  .roi-container {
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .title-with-icon h3 {
+    font-size: 22px;
+  }
+
+  .roi-text {
+    flex: 0 1 30%;
+  }
+
+  .roi-image {
+    flex: 0 1 65%;
+  }
+
+  .roi-text p {
+    font-size: 12px;
+  }
 }
 
 /* Trust & Promo Section */
