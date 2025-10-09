@@ -834,8 +834,36 @@ body {
   background-color: #f8f9fa;
 }
 
+/* Gambar danger merah di pojok kanan atas */
+.danger-icon {
+  position: absolute;
+  top: -30px;   /* atur sesuai tinggi yang lo mau */
+  right: -20px; /* biar nongol dikit keluar frame */
+  width: 60px;  /* ukuran icon */
+  height: auto;
+  transform: rotate(20deg);
+  animation: blinkDanger 1s infinite alternate;
+}
+
+/* Animasi kedip-kedip */
+@keyframes blinkDanger {
+  0% {
+    opacity: 1;
+    transform: rotate(20deg) scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: rotate(20deg) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(20deg) scale(1);
+  }
+}
+
 /* Kotak hijau (bagian atas) */
 .trust-box {
+  position: relative;
   background-color: #e1f4d4;
   padding: 1.5rem 2rem;
   border-radius: 5px;
@@ -847,18 +875,15 @@ body {
 
 /* Teks + emoji di dalam kotak hijau */
 .trust-text {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
   color: #1f3d1f;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 600;
   margin: 0;
+  line-height: 1.4;
 }
 
 /* Emoji blink ⚠️ */
-.blinking-emoji {
+/* .blinking-emoji {
   font-size: 100px;
   animation: blink 1s linear infinite;
 }
@@ -867,11 +892,11 @@ body {
   50% {
     opacity: 0;
   }
-}
+} */
 
 /* PROMO TEXT di bawah kotak */
 .promo-text {
-  font-size: 50px;
+  font-size: 30px;
   font-weight: 900;
   color: var(--primary-color);
   animation: zoom 2s infinite ease-in-out;
@@ -883,6 +908,14 @@ body {
     transform: scale(1.1);
   }
 }
+
+@media (max-width: 768px) {
+  .trust-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 18px; /* biar muat di layar HP */
+  }
 
 /* Floating WhatsApp Button & Footer */
 .floating-whatsapp {
