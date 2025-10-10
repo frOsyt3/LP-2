@@ -6,7 +6,6 @@
   --text-dark: #2c2c2c;
   --white: #ffffff;
   --border-color: #e0e0e0;
-  --font-family: "Poppins", sans-serif;
 
   /* Variabel untuk animasi scroll */
   --img-width: 150px;
@@ -21,7 +20,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Work Sans", sans-serif;
   background-color: #fff;
   color: #013220;
   padding: 74px 0;
@@ -158,30 +157,30 @@ body {
 
 .hero-text-container h1 {
   font-size: 50px;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 4.5rem;
   padding: 50px 0 0 50px;
   margin-bottom: 20px;
-  color: #013220;
+  color: #30642a;
 }
 
 .hero-text-container p {
   font-size: 20px;
   padding: 0 50px;
   line-height: 2rem;
-  color: #555;
+  color: #30642a;
 }
 
 .cta-button {
   display: inline-block;
-  background-color: #013220;
+  background-color: #30642a;
   color: white;
   font-weight: bold;
   font-size: 3rem;
   padding: 10px 15px;
   width: 600px;
   text-decoration: none;
-  margin: 50px 70px;
+  margin: 50px 70px 50px;
   transition: background-color 0.3s ease;
 }
 
@@ -227,9 +226,10 @@ body {
 
   .cta-button {
     font-size: 1rem;
-    padding: 10px 15px;
+    padding: 10px 10px;
+    text-align: center;
     width: 220px;
-    margin: 10px 0 0 40px;
+    margin: 30px 0 0 40px;
   }
 
   .hero-text-container {
@@ -238,10 +238,9 @@ body {
 
   .hero-text-container h1 {
     font-size: 30px;
-    font-weight: bold;
     line-height: 2.5rem;
-    padding: 70px 0 0 40px;
-    margin-bottom: 20px;
+    padding: 50px 0 0 40px;
+    margin-bottom: 10px;
     color: #013220;
     z-index: 1;
   }
@@ -249,7 +248,7 @@ body {
   .hero-text-container p {
     font-size: 15px;
     padding: 0 40px;
-    line-height: 2rem;
+    line-height: 1.5rem;
     color: black;
   }
 
@@ -275,10 +274,9 @@ body {
 
 /* Fitur gambar loop */
 .features-section {
-  background: linear-gradient(to bottom, #eaf5d8, #ffffff);
+  background: linear-gradient(to bottom, #eaf5d8, #b2df8a);
   padding-top: 20px;
   padding-bottom: 20px;
-
   max-width: 100%;
   margin: auto;
   overflow: hidden;
@@ -326,7 +324,7 @@ body {
 .features-list li {
   font-size: 1.2em;
   margin-bottom: 10px;
-  color: #1e442c;
+  color: #30642a;
 }
 
 .features-list li::before {
@@ -338,15 +336,15 @@ body {
 
 /* lAYANAN */
 .layanan-section {
-  background: linear-gradient(to bottom, #d7ebc2, #ffffff);
-  padding: 60px 0px 0px;
+  background: linear-gradient(to bottom, #b2df8a, #d7ebc2, #95c94d);
+  padding: 30px 0px 0px;
   text-align: center;
 }
 
 .judul-section {
   font-size: 35px;
   letter-spacing: 2px;
-  color: #1c552c;
+  color: #30642a;
 }
 
 .slider-container {
@@ -404,15 +402,16 @@ body {
 .layanan-info {
   flex: 1;
   line-height: 2rem;
+  font-family: "Crimson Text", serif;
   text-align: left;
-  color: #1d3922;
+  color: #30642a;
 }
 
 .layanan-info h3 {
   font-size: 30px;
   line-height: 2.5rem;
   font-style: italic;
-  color: #1c552c;
+  color: #30642a;
   font-weight: bold;
   margin-bottom: 5px;
 }
@@ -460,7 +459,8 @@ body {
 
 .deskripsi {
   font-size: 0.95rem;
-  color: #222;
+  font-family: "Crimson Text", serif;
+  color: #30642a;
   line-height: 1.6;
   margin: 20px 20px 0px;
   text-align: justify;
@@ -468,7 +468,7 @@ body {
 
 .btn-promo {
   display: inline-block;
-  background-color: #0b3c1c;
+  background-color: #30642a;
   color: white;
   padding: 10px 15px;
   border-radius: 8px;
@@ -501,7 +501,7 @@ body {
 .arrow svg {
   width: 40px;
   height: 40px;
-  stroke: #0b3c1c;
+  stroke: #30642a;
 }
 
 .arrow:hover {
@@ -533,16 +533,16 @@ body {
 
 /* Produksi */
 .produksi {
-  background: linear-gradient(to bottom, #b2df8a, #d8f3c8);
+  background: linear-gradient(to bottom, #95c94d, #d8f3c8);
   text-align: center;
   padding: 40px 0;
 }
 
 .produksi h2 {
-  color: #4caf50;
+  color: #30642a;
   font-size: 30px;
   margin-bottom: 30px;
-  font-family: sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 /* Wrapper buat padding kiri-kanan */
@@ -599,14 +599,14 @@ body {
 
 /* SERTIFIKASI */
 .sertifikasi {
-  background: linear-gradient(to bottom, #d0f0c0, #e6f5d0);
+  background: linear-gradient(to bottom, #d8f3c8, #b6da84);
   text-align: center;
-  padding: 30px 0 10px;
-  font-family: sans-serif;
+  padding: 30px 0 20px;
+  font-family: "Work Sans", serif;
 }
 
 .sertifikasi h2 {
-  color: #4caf50;
+  color: #30642a;
   font-size: 35px;
   font-weight: 700;
 }
@@ -616,6 +616,7 @@ body {
   position: relative;
   max-width: 1200px;
   overflow: hidden;
+  font-family: "Crimson Text", serif;
 }
 
 /* Wrapper slides */
@@ -633,27 +634,31 @@ body {
   justify-content: center;
 }
 
-/* Layout gambar kiri - teks kanan */
+/* ====== SERTIFIKASI ITEM ====== */
 .sertifikasi-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 80px;
+  gap: 60px;
   text-align: left;
   flex-wrap: nowrap;
   padding: 20px;
 }
 
-/* Gambar sertifikat */
+/* ====== GAMBAR ====== */
 .sertifikasi-item .certificate {
-  width: 450px;
+  flex: 0 1 35%;
+  width: 100%;
+  max-width: 380px;
   height: auto;
-  aspect-ratio: 9 / 11; /* mendekati 900x1080 */
+  aspect-ratio: 2 / 3; /* sesuai 2482x3898 */
+  object-fit: contain; /* tidak terpotong */
   border-radius: 12px;
-  object-fit: cover;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8; /* latar netral */
 }
 
-/* Bagian teks */
+/* ====== TEKS ====== */
 .sertifikasi-text-content {
   flex: 1;
   max-width: 600px;
@@ -662,12 +667,12 @@ body {
 .title-with-icon {
   display: flex;
   align-items: flex-start;
-  gap: 6px;
+  gap: 8px;
 }
 
 .title-with-icon h3 {
   font-size: 30px;
-  font-weight: lighter;
+  font-weight: 600;
   color: #000;
   margin: 0;
   line-height: 1.2;
@@ -680,60 +685,93 @@ body {
 }
 
 .sertifikasi-text-content h6 {
-  margin: 12px 0 20px;
-  font-size: 10px;
+  margin: 12px 0 16px;
+  font-size: 12px;
   font-weight: 400;
   color: #000;
 }
 
 .sertifikasi-text-content p {
-  font-size: 22px;
-  color: #4caf50;
-  line-height: 1.5;
+  font-size: 18px;
+  color: #30642a;
+  line-height: 1.6;
   text-align: justify;
 }
 
-/* RESPONSIVE — tetap kiri-kanan tapi proporsional */
+/* ====== RESPONSIVE - tetap kiri kanan ====== */
 @media (max-width: 1024px) {
+  .sertifikasi-item {
+    gap: 40px;
+  }
+
+  .sertifikasi-item .certificate {
+    max-width: 300px;
+  }
+
+  .sertifikasi-text-content p {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 768px) {
   .sertifikasi-item {
-    gap: 20px;
-    padding: 10px;
-  }
-
-  .title-with-icon h3 {
-    font-size: 35px;
-  }
-
-  .sertifikasi-text-content h6 {
-    font-size: 11px;
-    margin: 5px 0 10px;
+    gap: 25px;
+    padding: 40px 20px 20px;
   }
 
   .sertifikasi-item .certificate {
-    width: 150px;
+    flex: 0 1 40%;
+    max-width: 220px;
+  }
+
+  .title-with-icon h3 {
+    font-size: 50px;
+  }
+
+  .sertifikasi-text-content h6 {
+    font-size: 10px;
+    margin: 5px 0 10px;
   }
 
   .sertifikasi-text-content p {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
 @media (max-width: 480px) {
+  .sertifikasi-item {
+    gap: 15px;
+    padding: 25px 20px 20px;
+  }
+
+  .sertifikasi-item .certificate {
+    flex: 0 1 45%;
+    max-width: 120px;
+  }
+
+  .title-with-icon h3 {
+    font-size: 30px;
+  }
+
+  .sertifikasi-text-content h6 {
+    font-size: 11px;
+  }
+
+  .sertifikasi-text-content p {
+    font-size: 11px;
+  }
 }
 
 /* ======= ROI SECTION ======= */
 .roi-section {
-  background: linear-gradient(to bottom, #8dc63e, #e6f5d0);
+  background: linear-gradient(to bottom, #b6da84, #95c94d, #b6da84);
   text-align: center;
   padding: 30px 20px;
-  font-family: sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 .roi-section h2 {
-  color: #4caf50;
+  color: #30642a;
   font-size: 30px;
   margin-bottom: 40px;
   font-weight: 700;
@@ -745,6 +783,7 @@ body {
   flex-direction: row; /* teks kiri, gambar kanan */
   align-items: center;
   justify-content: space-between;
+  font-family: "Crimson Text", serif;
   gap: 60px;
   max-width: 1200px;
   margin: 0 auto;
@@ -773,15 +812,15 @@ body {
 }
 
 .checkmark-icon {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   object-fit: contain;
 }
 
 .roi-text p {
   margin-top: 20px;
   font-size: 20px;
-  color: #4caf50;
+  color: #30642a;
   line-height: 1.6;
   text-align: justify;
 }
@@ -795,11 +834,9 @@ body {
 
 .roi-image img {
   width: 100%;
-  max-width: 900px;
-  aspect-ratio: 178 / 146;
+  max-width: 500px; /* kamu bisa sesuaikan ukuran tampilan */
   height: auto;
-  border-radius: 10px;
-  object-fit: cover;
+  object-fit: contain; /* ubah dari cover ke contain agar tidak terpotong */
   border: 1px solid #ccc;
 }
 
@@ -826,7 +863,7 @@ body {
 @media (max-width: 768px) {
   .roi-container {
     gap: 25px;
-    padding: 10px;
+    padding: 0;
   }
 
   .title-with-icon h3 {
@@ -853,11 +890,11 @@ body {
 @media (max-width: 480px) {
   .roi-container {
     gap: 15px;
-    padding: 10px;
+    padding: 0;
   }
 
   .title-with-icon h3 {
-    font-size: 22px;
+    font-size: 30px;
   }
 
   .roi-text {
@@ -877,15 +914,15 @@ body {
 .trust-promo-section {
   text-align: center;
   padding: 4rem 7%;
-  background-color: #f8f9fa;
+  background: linear-gradient(to bottom, #b6da84, #e6f5d0);
 }
 
 /* Gambar danger merah di pojok kanan atas */
 .danger-icon {
   position: absolute;
-  top: -30px; /* atur sesuai tinggi yang lo mau */
-  right: -20px; /* biar nongol dikit keluar frame */
-  width: 60px; /* ukuran icon */
+  top: -40px; /* atur sesuai tinggi yang lo mau */
+  right: -25px; /* biar nongol dikit keluar frame */
+  width: 70px; /* ukuran icon */
   height: auto;
   transform: rotate(20deg);
   animation: blinkDanger 1s infinite alternate;
@@ -910,8 +947,8 @@ body {
 /* Kotak hijau (bagian atas) */
 .trust-box {
   position: relative;
-  background-color: #e1f4d4;
-  padding: 1.5rem 2rem;
+  background-color: #ffffff;
+  padding: 1.5rem 1rem;
   border-radius: 5px;
   max-width: 800px;
   margin: 0 auto 2rem auto;
@@ -922,8 +959,9 @@ body {
 /* Teks + emoji di dalam kotak hijau */
 .trust-text {
   color: #1f3d1f;
+  font-family: "Crimson Text", serif;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: bolder;
   margin: 0;
   line-height: 1.4;
 }
@@ -943,9 +981,10 @@ body {
 /* PROMO TEXT di bawah kotak */
 .promo-text {
   font-size: 30px;
-  font-weight: 900;
+  font-weight: 700;
   color: var(--primary-color);
   animation: zoom 2s infinite ease-in-out;
+  font-family: "Work Sans", serif;
   margin-top: 1rem;
 }
 
@@ -1045,7 +1084,7 @@ body {
   }
 
   .features-list li {
-    font-size: 1em;
+    font-size: 0.8em;
     margin-bottom: 10px;
     color: #1e442c;
   }
