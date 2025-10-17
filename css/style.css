@@ -336,11 +336,13 @@ body {
 /* paket */
 .features-list-paket {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: flex-end;
   gap: 60px;
   margin-top: 20px;
   padding: 0 20px;
+  text-align: right;
+  transform: translateX(-30px);
 }
 .features-list-paket ul {
   list-style: none;
@@ -348,18 +350,21 @@ body {
 }
 
 .features-list-paket li {
-  font-size: 1.2em;
+  font-size: 0.5em;
   margin-bottom: 10px;
   color: #30642a;
   display: flex;
   align-items: center; /* Biar ikon dan teks sejajar */
+  justify-content: flex-end;
 }
 
 .features-list-paket li::before {
   content: "✔";
   color: red;
-  margin-right: 8px;
+  margin-left: 8px; /* kasih jarak di kiri karena iconnya di kanan */
+  margin-right: 0px;
   font-weight: bold;
+  order: 2;
 }
 
 /* lAYANAN */
@@ -505,6 +510,7 @@ body {
   font-size: 20px;
   transition: background 0.3s;
   margin: 20px;
+  transform: translateX(-30px);
 }
 
 .btn-promo:hover {
