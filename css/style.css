@@ -333,6 +333,34 @@ body {
   margin-right: 8px;
   font-weight: bold;
 }
+/* paket */
+.features-list-paket {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 60px;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+.features-list-paket ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features-list-paket li {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #30642a;
+  display: flex;
+  align-items: center; /* Biar ikon dan teks sejajar */
+}
+
+.features-list-paket li::before {
+  content: "✔";
+  color: red;
+  margin-right: 8px;
+  font-weight: bold;
+}
 
 /* lAYANAN */
 .layanan-section {
