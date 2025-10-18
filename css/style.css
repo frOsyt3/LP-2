@@ -421,7 +421,7 @@ body {
 
 .harga-normal {
   font-size: 0.9rem;
-  text-align: right;
+  text-align: left;
   color: #1c552c;
 }
 
@@ -549,7 +549,7 @@ body {
   }
 
   .harga-promo {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   .jt {
