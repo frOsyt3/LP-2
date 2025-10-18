@@ -333,51 +333,17 @@ body {
   margin-right: 8px;
   font-weight: bold;
 }
-/* paket */
-.features-list-paket {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-  gap: 60px;
-  margin-top: 20px;
-  padding: 0 20px;
-  text-align: right;
-  transform: translateX(-30px);
-}
-.features-list-paket ul {
-  list-style: none;
-  padding: 0;
-}
 
-.features-list-paket li {
-  font-size: 0.5em;
-  margin-bottom: 10px;
-  color: #30642a;
-  display: flex;
-  align-items: center; /* Biar ikon dan teks sejajar */
-  justify-content: flex-end;
-}
-
-.features-list-paket li::before {
-  content: "✔";
-  color: red;
-  margin-left: 8px; /* kasih jarak di kiri karena iconnya di kanan */
-  margin-right: 0px;
-  font-weight: bold;
-  order: 2;
-}
-
-/* lAYANAN */
 .layanan-section {
   background: linear-gradient(to bottom, #b2df8a, #d7ebc2, #95c94d);
-  padding: 30px 0px 0px;
+  padding: 40px 0 0;
   text-align: center;
 }
 
 .judul-section {
   font-size: 35px;
-  letter-spacing: 2px;
   color: #30642a;
+  letter-spacing: 2px;
 }
 
 .slider-container {
@@ -394,7 +360,6 @@ body {
 
 .slide {
   min-width: 100%;
-  box-sizing: border-box;
   display: flex;
   justify-content: center;
 }
@@ -403,74 +368,70 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
   padding: 30px 0 20px;
   max-width: 900px;
-  width: 100%;
   overflow: hidden;
-  gap: 25px;
-  position: relative;
+  width: 100%;
 }
 
 .layanan-top {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 30px;
+  justify-content: space-between;
+  gap: 10px;
   width: 100%;
 }
 
 .layanan-img {
-  flex: 0 0 350px;
-  margin-left: 0;
+  flex: 0 0 50%;
+  margin: 0;
 }
 
 .layanan-img img {
   width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
+  margin: 0;
 }
 
+/* Biar teks kanan gak kejepit */
 .layanan-info {
   flex: 1;
-  line-height: 2rem;
-  font-family: "Crimson Text", serif;
-  text-align: left;
   color: #30642a;
+  text-align: right;
+  padding-right: 40px;
 }
 
 .layanan-info h3 {
   font-size: 30px;
-  line-height: 2.5rem;
   font-style: italic;
-  color: #30642a;
+  text-align: left;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .harga-container {
   display: flex;
   align-items: flex-start;
-  gap: 5px;
+  justify-content: flex-end;
+  gap: 10px;
   margin-top: 10px;
 }
 
 .harga-normal {
-  text-align: left;
+  font-size: 0.9rem;
+  text-align: right;
   color: #1c552c;
-  font-size: 0.8rem;
-  line-height: 1.2;
 }
 
 .harga-coret {
   color: #b10000;
   text-decoration: line-through;
-  font-weight: 500;
 }
 
 .harga-promo {
-  font-size: 5rem;
+  font-size: 4.5rem;
   font-weight: 700;
   font-style: italic;
   color: black;
@@ -481,50 +442,66 @@ body {
 .jt {
   font-size: 1.5rem;
   position: relative;
-  top: -2em; /* naik ke atas angka */
+  top: -1.8em;
   margin-left: 10px;
 }
 
-.layanan-bottom {
-  width: 100%;
-  text-align: right;
+.features-list-paket {
+  display: flex;
+  justify-content: flex-end;
+  gap: 60px;
+  margin-top: 20px;
+  padding-right: 20px;
 }
 
-.deskripsi {
-  font-size: 0.95rem;
-  font-family: "Crimson Text", serif;
+.features-list-paket ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features-list-paket li {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
   color: #30642a;
-  line-height: 1.6;
-  margin: 20px 20px 0px;
-  text-align: justify;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row-reverse; /* tambahin ini supaya ikon pindah ke kiri tapi teks tetap rata kanan */
+}
+
+.features-list-paket li::before {
+  content: "✔";
+  color: red;
+  margin-right: 8px; /* ganti jadi kanan karena ikon di kiri teks */
+  margin-left: 0;
+  font-weight: bold;
+  order: 1;
 }
 
 .btn-promo {
   display: inline-block;
   background-color: #30642a;
   color: white;
-  padding: 10px 15px;
+  padding: 10px 18px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
   transition: background 0.3s;
-  margin: 20px;
-  transform: translateX(-30px);
+  margin-top: 25px;
 }
 
 .btn-promo:hover {
-  background-color: #196e35;
+  background-color: #1e5524;
 }
 
-/* Tombol panah */
+/* Arrow */
 .arrow {
   position: absolute;
   top: 52%;
   transform: translateY(-50%);
   background: transparent;
   border: none;
-
   cursor: pointer;
   z-index: 10;
   display: flex;
@@ -532,13 +509,10 @@ body {
   justify-content: center;
 }
 
-.arrow svg {
+.arrow i {
   width: 40px;
   height: 40px;
-  stroke: #30642a;
-}
-
-.arrow:hover {
+  color: #30642a;
 }
 
 .arrow.prev {
@@ -549,19 +523,57 @@ body {
   right: 15px;
 }
 
-/* Responsif — tetap sama layout-nya */
+/* === FIX UNTUK MOBILE === */
 @media (max-width: 768px) {
   .layanan-top {
-    flex-direction: row; /* tetap sejajar kiri-kanan */
-    gap: 15px;
+    padding: 0; /* hilangin padding biar gambar nempel kiri */
   }
 
   .layanan-img {
-    flex: 0 0 45%;
+    flex: 0 0 50%; /* gambar jadi lebih gede */
+    min-width: 50%;
+    max-width: 50%;
   }
 
   .layanan-info {
-    flex: 1;
+    padding-right: 20px;
+  }
+
+  .layanan-info h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .harga-normal {
+    font-size: 11px;
+  }
+
+  .harga-promo {
+    font-size: 5rem;
+  }
+
+  .jt {
+    top: -1.4em;
+  }
+
+  .features-list-paket {
+    gap: 25px;
+    padding-right: 0;
+  }
+
+  .features-list-paket li {
+    font-size: 8px;
+  }
+
+  .btn-promo {
+    font-size: 15px;
+    margin-top: 10px;
+    padding: 7px 14px;
+  }
+
+  .arrow i {
+    width: 30px;
+    height: 30px;
   }
 }
 
