@@ -19,6 +19,23 @@
   box-sizing: border-box;
 }
 
+.arrow,
+.arrow i,
+.arrow svg {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  border: none;
+  background: transparent;
+  color: inherit;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .features-list-paket li::before {
+    color: red !important;
+    -webkit-text-fill-color: red;
+  }
+}
+
 body {
   font-family: "Work Sans", sans-serif;
   background-color: #fff;
@@ -509,6 +526,7 @@ body {
   justify-content: center;
 }
 
+.arrow i,
 .arrow svg {
   width: 40px;
   height: 40px;
